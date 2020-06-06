@@ -28,7 +28,7 @@ export default (props: Props) => {
   return (
     <>
       <p>{props.id}: Build At {props.buildAt}</p>
-      <p>version: 3</p>
+      <p>version: 4</p>
       <Loading />
     </>
   );
