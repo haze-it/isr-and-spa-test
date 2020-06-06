@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
       id: context.params.id as string,
       buildAt: dayjs().format('YYYY年MM月DD日 HH:mm:ss'),
     },
-    unstable_revalidate: 600,
+    unstable_revalidate: 10000,
   };
 };
 
@@ -28,7 +28,7 @@ export default (props: Props) => {
   return (
     <>
       <p>{props.id}: Build At {props.buildAt}</p>
-      <p>version: 2</p>
+      <p>version: 3</p>
       <Loading />
     </>
   );
