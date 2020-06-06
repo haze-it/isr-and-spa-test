@@ -2,14 +2,14 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import Loading from "../../components/loading";
 
 type Props = {
-  article_id: string;
+  id: string;
   buildAt: number;
 };
 
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
   return {
     props: {
-      article_id: context.params.article_id as string,
+      id: context.params.id as string,
       buildAt: Date.now(),
     },
     unstable_revalidate: 60,
@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: ["/mag/[article_id]"], // ここに await getArticleIdsApi() みたいなことできる？
+    paths: ["/mag/1"], // ここに await getArticleIdsApi() みたいなことできる？
     fallback: true,
   };
 };
@@ -26,7 +26,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export default (props: Props) => {
   return (
     <>
-      {props.article_id}: {props.buildAt}
+      {props.id}: {props.buildAt}
       <Loading />
     </>
   );
