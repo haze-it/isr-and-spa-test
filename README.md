@@ -1,3 +1,7 @@
+[Next.js v9.4 で追加されたIncremental Static Regenerationの挙動を調べた](https://hazediary.hateblo.jp/entry/2020/06/06/230526) のソースコード
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
